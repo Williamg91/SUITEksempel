@@ -10,22 +10,24 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
 public class Main extends Application {
 
     static Database db;
+
     public static void main(String[] args)
 
 
     {
-       // db = new Database();
+        // db = new Database();
         //db.insertResults();
+        PanelController controller = new PanelController(new Panelclass());
 
 
-
-       // javaFXLogic(args);
+        // javaFXLogic(args);
 
 
     }
@@ -41,7 +43,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-     //   FXMLLoader root = new FXMLLoader(Main.class.getResource("sample.fxml"));
+        //   FXMLLoader root = new FXMLLoader(Main.class.getResource("sample.fxml"));
         //parent
         AnchorPane scene = null;
         try {
