@@ -1,18 +1,11 @@
 package sample;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader.*;
 import javafx.fxml.*;
-import javafx.scene.Group;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
-import javax.swing.*;
-import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 
 public class Main extends Application {
 
@@ -24,7 +17,8 @@ public class Main extends Application {
     {
         // db = new Database();
         //db.insertResults();
-        PanelController controller = new PanelController(new Panelclass());
+Panelclass pc = new Panelclass();
+
 
 
         // javaFXLogic(args);

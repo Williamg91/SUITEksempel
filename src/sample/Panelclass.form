@@ -1,23 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="sample.Panelclass">
-  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="1259" height="506"/>
+      <xy x="20" y="20" width="1199" height="614"/>
     </constraints>
     <properties>
       <background color="-9342092"/>
     </properties>
-    <border type="none"/>
+    <border type="bevel-raised" title="SUIT sensorprogram">
+      <font size="36" style="1"/>
+    </border>
     <children>
-      <component id="8b350" class="javax.swing.JButton" binding="startButton" default-binding="true">
+      <splitpane id="bcca7">
         <constraints>
-          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="6" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="200"/>
+          </grid>
         </constraints>
         <properties>
-          <text value="Start"/>
+          <background color="-14717068"/>
         </properties>
-      </component>
+        <border type="none"/>
+        <children>
+          <grid id="3c6f2" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <splitpane position="left"/>
+            </constraints>
+            <properties>
+              <background color="-9342092"/>
+              <minimumSize width="300" height="10"/>
+            </properties>
+            <border type="none" title="Venstre"/>
+            <children>
+              <component id="d34af" class="javax.swing.JButton" binding="startProgramButton" default-binding="true">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="3" anchor="6" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Start program"/>
+                </properties>
+              </component>
+              <component id="57b65" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="Vælg sensor"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="3a99" class="javax.swing.JFormattedTextField" binding="Cpr">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="43" height="20"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <text value="1234561234"/>
+                </properties>
+              </component>
+              <component id="afb6b" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="5" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <alignmentX value="1.0"/>
+                  <font size="14" style="1"/>
+                  <text value="CPR-nummer:"/>
+                </properties>
+              </component>
+              <component id="5f5c1" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="5" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font size="22" style="1"/>
+                  <horizontalAlignment value="4"/>
+                  <text value="Aktiv bruger: William"/>
+                  <verticalAlignment value="3"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="28b00" binding="graphPanel" layout-manager="CardLayout" hgap="0" vgap="0">
+            <constraints>
+              <splitpane position="right"/>
+            </constraints>
+            <properties>
+              <background color="-9342092"/>
+            </properties>
+            <border type="none" title="Seneste målinger"/>
+            <children/>
+          </grid>
+        </children>
+      </splitpane>
     </children>
   </grid>
 </form>
