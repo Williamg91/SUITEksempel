@@ -17,6 +17,7 @@ public class Main extends Application {
     {
         // db = new Database();
         //db.insertResults();
+
 Panelclass pc = new Panelclass();
 
 

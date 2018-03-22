@@ -27,7 +27,7 @@ public class TegnGra extends JPanel {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
 
-                createAndShowGui();
+                //createAndShowGui();
             }
         });
     }
@@ -160,6 +160,9 @@ public class TegnGra extends JPanel {
         TegnGra mainPanel = new TegnGra(scores);
         mainPanel.setPreferredSize(new Dimension(800, 600));
         JFrame frame = new JFrame("DrawGraph");
+
+
+
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().add(mainPanel);
         frame.pack();
