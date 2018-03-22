@@ -7,9 +7,12 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import java.sql.SQLException;
+import java.util.ArrayList;
+
 public class Main extends Application {
 
-    static Database db;
+    static Database db = new Database();
 
     public static void main(String[] args)
 
@@ -18,8 +21,13 @@ public class Main extends Application {
         // db = new Database();
         //db.insertResults();
 
-Panelclass pc = new Panelclass();
+//Panelclass pc = new Panelclass();
 
+        ArrayList<Double> al = db.indsaetrandomfyld(10);
+
+
+       // db.insertResults(2018, al);
+        db.getResults(2018);
 
 
         // javaFXLogic(args);
