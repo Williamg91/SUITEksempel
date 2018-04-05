@@ -1,12 +1,14 @@
 package sample;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JCheckBox;
 import java.util.Vector;
+import java.awt.Toolkit.*;
 
 public class Panelclass extends JFrame {
 
@@ -18,18 +20,24 @@ public class Panelclass extends JFrame {
     private JPanel graphPanel;
     private JTextField a1234561234TextField;
     private JButton afslutPatientButton;
+    private JSplitPane splitter;
     private JList list1;
     public JButton fireItUpButton;
 
     public Panelclass() {
-        this.setSize(900, 600);
+        FrameController fc = new FrameController(this);
+        this.setSize(1200, 600);
         this.setTitle("SUIT");
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        setupLists();
+
+//        setupLists();
         this.setContentPane(panel1);
 
-        this.setLocationRelativeTo(null);
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        double width = screenSize.getWidth();
+        double height = screenSize.getHeight();
+        this.setLocation(0    ,100);
         //   this.pack();
         this.setVisible(true);
 
@@ -60,20 +68,11 @@ public class Panelclass extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
+                fc.visMinGraf(true);
+                Panelclass.super.setSize(splitter.getDividerLocation()+100,Panelclass.super.getHeight());
 
             }
         });
-
-
-    }
-
-    private void setupLists() {
-        JCheckBox knap1 = new JCheckBox("Sensor I");
-        JCheckBox knap2 = new JCheckBox("Sensor 2");
-
-        DefaultListModel dlm = new DefaultListModel();
-        list1.setModel(dlm);list1.add(knap1);
-        list1.add(knap2);
 
 
     }

@@ -12,22 +12,23 @@ import java.util.ArrayList;
 
 public class Main extends Application {
 
-    static Database db = new Database();
+
 
     public static void main(String[] args)
 
 
     {
+        Panelclass pc = new Panelclass();
         // db = new Database();
         //db.insertResults();
 
 //Panelclass pc = new Panelclass();
 
-        ArrayList<Double> al = db.indsaetrandomfyld(10);
+      //  ArrayList<Double> al = db.indsaetrandomfyld(10);
 
 
        // db.insertResults(2018, al);
-        db.getResults(2018);
+        //db.getResults(2018);
 
 
         // javaFXLogic(args);

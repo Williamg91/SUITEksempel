@@ -19,7 +19,7 @@ public class TegnGra extends JPanel {
     private static final Stroke GRAPH_STROKE = new BasicStroke(2f);
     private int pointWidth = 4;
     private int numberYDivisions = 10;
-    private List<Double> scores;
+    public List<Double> scores;
 
     public TegnGra(List<Double> scores) {
         this.scores = scores;
@@ -27,7 +27,7 @@ public class TegnGra extends JPanel {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
 
-                //createAndShowGui();
+                createAndShowGui();
             }
         });
     }
@@ -147,27 +147,9 @@ public class TegnGra extends JPanel {
         return scores;
     }
 
-    private static void createAndShowGui() {
-        List<Double> scores = new ArrayList<>();
-        Random random = new Random();
-        int maxDataPoints = 40;
-        int maxScore = 10;
-        for (int i = 0; i < maxDataPoints; i++) {
-            scores.add((double) random.nextDouble() * maxScore);
-//            scores.add((double) i);
-        }
+    private void createAndShowGui() {
+     setScores(scores);
 
-        TegnGra mainPanel = new TegnGra(scores);
-        mainPanel.setPreferredSize(new Dimension(800, 600));
-        JFrame frame = new JFrame("DrawGraph");
-
-
-
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().add(mainPanel);
-        frame.pack();
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
     }
 
 

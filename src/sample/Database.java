@@ -1,14 +1,12 @@
 package sample;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.sql.*;
 import java.util.Date;
 import java.util.Random;
+import java.util.Scanner;
 
 
 public class Database {
@@ -100,24 +98,57 @@ public class Database {
         al = new ArrayList();
         try {
             Statement st = conn.createStatement();
-            String sql = "SELECT * FROM hospital.undersogelser where idUndersogelser =" + id;
+            String sql = "SELECT * FROM hospital.vaerdier where idvaerdier =" + id;
             ResultSet rs = st.executeQuery(sql);
-while(rs.next()){
-    al.add(rs.getDouble(2));
-}
+            while (rs.next()) {
+                al.add(rs.getDouble(2));
+            }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
         System.out.println("Skaffet fra db:");
-        for (double value: al
-             ) {
-            System.out.println(value);
+        for (int i = 0; i < al.size(); i++) {
+            System.out.println(al.get(i));
         }
 
         return al;
 
     }
+/*
+    public double[][] getFiles(String fil1, String fil2) {
+        double[][] results = null;
+        //tid, value
+
+        try {
+            Scanner s = new Scanner(new File(fil1));
+
+            ArrayList<Double> list1 = new ArrayList<>();
+            while (s.hasNext()){
+                list1.add(Double.parseDouble(s.next()));
+            }
+            s.close();
+            s = new Scanner(new File(fil2));
+            ArrayList<Integer> list2 = new ArrayList<>();
+            while (s.hasNext()){
+                list2.add(Integer.parseInt(s.next()));
+            }//Parse vores int
+
+            double[] tid = new double[list2.size()];
 
 
+            double[] values = new double[list1.size()];
+
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
+
+        return results;
+
+
+    }
+*/
 }
