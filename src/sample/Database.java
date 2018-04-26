@@ -15,6 +15,7 @@ public class Database {
     ArrayList<Double> al;
     Connection conn;
 
+
     public Database() {
 
         try {
@@ -73,8 +74,16 @@ public class Database {
 
     }
 
+    public double randomVaerdi(double min, double max) {
 
-    ArrayList<Double> indsaetrandomfyld(int size) {
+        double result;
+        Random r = new Random();
+        result = min+(max-min)*r.nextDouble();
+        return result;
+
+    }
+
+    public ArrayList<Double> indsaetrandomfyld(int size) {
 
         ArrayList<Double> gylle = new ArrayList<>();
         // System.out.println("Gylles indhold:");
@@ -86,7 +95,7 @@ public class Database {
         for (int i = 0; i < size; i++) {
 
             gylle.add(min + (max - min) * r.nextDouble());
-
+//double resultat = min+(max-min)*r.nextDouble();
             //   System.out.println(gylle.get(i));
         }
 

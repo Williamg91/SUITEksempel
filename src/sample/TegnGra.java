@@ -1,7 +1,6 @@
 package sample;
 
 
-
 import java.awt.*;
 import javax.swing.*;
 import java.util.*;
@@ -24,8 +23,10 @@ public class TegnGra extends JPanel {
     public TegnGra(List<Double> scores) {
         this.scores = scores;
 
+
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
+
 
                 createAndShowGui();
             }
@@ -148,7 +149,7 @@ public class TegnGra extends JPanel {
     }
 
     private void createAndShowGui() {
-     setScores(scores);
+        setScores(scores);
 
     }
 

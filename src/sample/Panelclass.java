@@ -20,7 +20,10 @@ public class Panelclass extends JFrame {
     private JPanel graphPanel;
     private JTextField a1234561234TextField;
     private JButton afslutPatientButton;
-    private JSplitPane splitter;
+    public JSplitPane splitter;
+    private JTextField textField1;
+    private JLabel pulsLabel;
+    private JLabel tempLabel;
     private JList list1;
     public JButton fireItUpButton;
 
@@ -37,7 +40,7 @@ public class Panelclass extends JFrame {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         double width = screenSize.getWidth();
         double height = screenSize.getHeight();
-        this.setLocation(0    ,100);
+        this.setLocation(0, 100);
         //   this.pack();
         this.setVisible(true);
 
@@ -68,8 +71,10 @@ public class Panelclass extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                fc.visMinGraf(true);
-                Panelclass.super.setSize(splitter.getDividerLocation()+100,Panelclass.super.getHeight());
+                CardLayout cl (= graphPanel.getLayout();
+                //We utilize the CardLayout for adding and showing a new TegnGra panel as a Card. This Card gets repainted.
+                fc.visMinGraf(true, graphPanel, graphPanel);
+                Panelclass.super.setSize(splitter.getDividerLocation() + 100, Panelclass.super.getHeight());
 
             }
         });
